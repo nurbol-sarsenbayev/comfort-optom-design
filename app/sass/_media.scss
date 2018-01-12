@@ -118,27 +118,19 @@
 				font-size: 30px;
 				margin-bottom: 5px;
 			}
-
-			&-list {
-				li {
-					display: block;
-				}
-			}
-
-			.block {
-				margin-top: 200px;
-			}
 		}
 
-		&-reason {
-			&-block {
-				margin-top: 0;
-				max-width: 450px;
-				text-align: center;
-				margin: 0 auto 30px auto;
-				background-image: -moz-linear-gradient( 3deg, rgba(254,254,254, 0.9) 0%, rgba(226,226,226, 0.9) 100%);
-				background-image: -webkit-linear-gradient( 3deg, rgba(254,254,254, 0.9) 0%, rgba(226,226,226, 0.9) 100%);
-				background-image: -ms-linear-gradient( 3deg, rgba(254,254,254, .9) 0%, rgba(226,226,226, 0.9) 100%);
+		&-ohvat {
+			.flex-center {
+				.rect {
+					&:nth-child(3n) {
+						margin-right: 0;
+					}
+
+					&:nth-child(3n+1) {
+						margin-left: 0;
+					}
+				}
 			}
 		}
 	}
@@ -152,22 +144,9 @@
 			display: none;
 		}
 	}
-
-	// .owl-carousel {
-	// 	.owl {	
-	// 		&-prev {
-	// 			left: 50px;
-	// 		}
-	
-	// 		&-next {
-	// 			right: 50px;
-	// 		}
-	// 	}
-	// }
 	
 }
 	/**/
-
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
@@ -177,54 +156,33 @@
 	}
 
 	.block {
-		width: 100%;
-
-		.input {
-			margin: 0 0 15px 0;
-			width: 100%;
-		}
-		
-		.button {
-			margin: 15px auto 0 auto;
-		}
-
 		&-border {
 			.section-right &, .section-left & {
 				background-image: none;
-				// background: rgba(0,0,0, 0.5);
+				padding-right: 40px;
 			}
 		}
 	}
 
 	.section {
 		&-main {
-			.block {
-				margin-top: 100px;
-			}
 		}
 
-		&-reason {
-			&-block {
-				background: none;
-				box-shadow: none;
-				padding: 0;
-				max-width: none;
-				width: 100%;
-			}
+		&-ohvat {
+			.flex-center {				
+				.rect {
+					margin: 15px;
 
-			.reason {
-				height: auto;
-				margin-bottom: 30px;
-			}
-		}
+					&:nth-child(3n) {
+						margin-right: 15px;
+					}
 
-		&-order {
-			.order {
-				&-line {
-					display: none;
+					&:nth-child(3n+1) {
+						margin-left: 15px;
+					}
 				}
 			}
-		}
+		}		
 	}
 
 	.footer {
@@ -239,26 +197,6 @@
 			display: block;
 		}
 	}
-
-	// .owl-carousel {
-	// 	.owl {	
-	// 		&-prev, &-next {
-	// 			transform: scale(0.5);
-	// 		}	
-
-	// 		&-dot {
-	// 			transform: scale(0.7);
-	// 		}
-
-	// 		&-prev {
-	// 			left: 10px;
-	// 		}
-
-	// 		&-next {
-	// 			right: 10px;
-	// 		}
-	// 	}
-	// }
 }
 	/**/
 
@@ -282,6 +220,12 @@
 		padding: 15px 30px;
 	}
 
+	.modal {
+		&-content {
+			padding: 15px;
+		}
+	}
+
 	.section {
 		&-title {
 			font-size: 30px;
@@ -289,16 +233,7 @@
 				top: -15px;
 				font-size: 36px;
 			}
-		}
-
-		&-reason {
-			&-title {
-				font-size: 30px;
-				span {
-					font-size: 25px;
-				}
-			}
-		}
+		}		
 
 		&-numbers {			
 			.numbers {
