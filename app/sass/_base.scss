@@ -513,21 +513,11 @@ img {
 	padding: 20px 30px;
 	margin-bottom: 30px;
 	  
-	&-title {
-		font-family: Comforta;
-		font-weight: bold;
-		font-size: 18px;
-		margin-bottom: 10px;
-	}
-
 	&-image {
 		flex-grow: 1;
 		display: flex;
 		align-items: center;
 		margin-bottom: 10px;
-	}
-
-	img {
 	}
 }
 
