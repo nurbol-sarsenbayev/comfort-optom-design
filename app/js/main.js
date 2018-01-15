@@ -93,6 +93,7 @@ $(function() {
     $(".modal-open").click(function() {
         var id = $(this).data('id');
         $('#'+id).fadeIn(500);
+        return false;
     });
 
     $(".modal").click(function() {
@@ -115,9 +116,15 @@ $(function() {
         $phone.val('');
     });
 
+    var $thanks = $("#thanks");
+
     $(".modal-submit").click(function(e) {
         e.preventDefault();
         var $phone = $(this).siblings('.phone');
+
+        if($phone.length == 0) {
+            $phone = $(this).closest('.block').find('.phone');
+        }
 
         if($phone.length && !$phone.val()) {
             $phone.addClass('error');
@@ -125,6 +132,7 @@ $(function() {
             $phone.removeClass('error');
             $phone.val('');
             $(this).closest('.modal').fadeOut(500);
+            $thanks.fadeIn(500);
         }
     });
 
