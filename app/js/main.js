@@ -120,17 +120,23 @@ $(function() {
 
     $(".modal-submit").click(function(e) {
         e.preventDefault();
-        var $phone = $(this).siblings('.phone');
-
-        if($phone.length == 0) {
-            $phone = $(this).closest('.block').find('.phone');
-        }
+        
+        var $form = $(this).closest('form');
+        var $phone = $form.find('.phone');
 
         if($phone.length && !$phone.val()) {
             $phone.addClass('error');
         } else {
             $phone.removeClass('error');
-            $phone.val('');
+
+            $.ajax({
+                type: "POST",
+                url: "/mail.php",
+                data: $form.serialize()
+            }).done(function() {
+                $form[0].reset();
+            });
+
             $(this).closest('.modal').fadeOut(500);
             $thanks.fadeIn(500);
         }
