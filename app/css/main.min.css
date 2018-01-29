@@ -880,7 +880,8 @@ body {
   right: 0;
   bottom: 0;
   background-color: #222;
-  z-index: 100; }
+  z-index: 100;
+  display: none; }
   .preloader .fa {
     position: absolute;
     top: 50%;
@@ -907,8 +908,7 @@ body {
   opacity: .3;
   -webkit-transition: all .5s ease-out;
   -o-transition: all .5s ease-out;
-  transition: all .5s ease-out;
-  display: none; }
+  transition: all .5s ease-out; }
   .page-top.active {
     right: 20px; }
   .page-top:hover {

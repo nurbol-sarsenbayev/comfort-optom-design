@@ -8,7 +8,7 @@ $(function() {
     var $loader = $(".preloader");
 
     $wnd.on('load', function() {        
-        $loader.delay(0).fadeOut('slow');    
+        // $loader.delay(0).fadeOut('slow');    
         
         $(".section-standart .item").equalHeights();
         $(".section-optima .item").equalHeights();
