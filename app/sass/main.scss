@@ -49,6 +49,7 @@ body {
 	color: #ffffff;
 	opacity: .3;
 	transition: all .5s ease-out;	
+	display: none;
 
 	&.active {		
 		right: 20px;			

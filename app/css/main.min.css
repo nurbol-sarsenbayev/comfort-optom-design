@@ -907,7 +907,8 @@ body {
   opacity: .3;
   -webkit-transition: all .5s ease-out;
   -o-transition: all .5s ease-out;
-  transition: all .5s ease-out; }
+  transition: all .5s ease-out;
+  display: none; }
   .page-top.active {
     right: 20px; }
   .page-top:hover {
